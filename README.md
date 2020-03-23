@@ -7,6 +7,9 @@ In order to do so, the module dependencies are carefully managed (see next secti
 # 2. Dependencies
 At the base of everything are the two modules core and torch_core (we're not including the fastai. prefix when naming modules in these docs). They define the basic functions we use in the library; core only relies on general modules, whereas torch_core requires pytorch. Most type-hinting shortcuts are defined there too (at least the one that don't depend on fastai classes defined later). Nearly all modules below import torch_core.
 Then, there are three modules directly on top of torch_core:
-1.basic_data, which contains the class that will take a Dataset or pytorch DataLoader to wrap it in a DeviceDataLoader (a class that sits on top of a DataLoader and is in charge of putting the data on the right device as well as applying transforms such as normalization) and regroup then in a DataBunch.
-2.layers, which contains basic functions to define custom layers or groups of layers
-3.metrics, which contains all the metrics
+#
+basic_data, which contains the class that will take a Dataset or pytorch DataLoader to wrap it in a DeviceDataLoader (a class that sits on top of a DataLoader and is in charge of putting the data on the right device as well as applying transforms such as normalization) and regroup then in a DataBunch.
+#
+layers, which contains basic functions to define custom layers or groups of layers
+#
+metrics, which contains all the metrics
